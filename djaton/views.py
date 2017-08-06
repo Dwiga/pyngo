@@ -1,5 +1,6 @@
 from django.http import HttpResponse
-
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("<b>Hello, world. You're at the djaton index.</b>")
+	data = "haha"
+	return render(request, 'djaton/index.html', {'data': data})
